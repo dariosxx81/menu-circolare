@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+  <!-- Arcaplanet pet food icon -->
+  <defs>
+    <style>
+      .bag { fill: #8BC34A; }
+      .bowl { fill: #FFC107; }
+      .food { fill: #8D6E63; }
+      .outline { fill: none; stroke: #2C3E50; stroke-width: 3; stroke-linejoin: round; }
+      .detail { fill: #2C3E50; }
+      .logo-bg { fill: #FF5722; }
+    </style>
+  </defs>
+  
+  <!-- Pet food bag -->
+  <path class="bag" d="M60 40 L60 120 Q60 130 70 130 L110 130 Q120 130 120 120 L120 40 Z"/>
+  <path class="outline" d="M60 40 L60 120 Q60 130 70 130 L110 130 Q120 130 120 120 L120 40 Z"/>
+  
+  <!-- Logo area -->
+  <rect class="logo-bg" x="70" y="55" width="40" height="22" rx="4"/>
+  <text x="90" y="71" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="white" text-anchor="middle">PET</text>
+  
+  <!-- Paw print on bag -->
+  <circle class="detail" cx="90" cy="95" r="6"/>
+  <circle class="detail" cx="78" cy="88" r="4"/>
+  <circle class="detail" cx="102" cy="88" r="4"/>
+  <circle class="detail" cx="82" cy="102" r="4"/>
+  <circle class="detail" cx="98" cy="102" r="4"/>
+  
+  <!-- Food bowl -->
+  <path class="bowl" d="M110 130 L120 150 Q120 160 130 160 L160 160 Q170 160 170 150 L175 130 Z"/>
+  <path class="outline" d="M110 130 L120 150 Q120 160 130 160 L160 160 Q170 160 170 150 L175 130 Z"/>
+  <ellipse class="outline" cx="142" cy="130" rx="32" ry="8"/>
+  
+  <!-- Food in bowl -->
+  <circle class="food" cx="135" cy="142" r="6"/>
+  <circle class="food" cx="148" cy="142" r="6"/>
+  <circle class="food" cx="141" cy="135" r="5"/>
+  <circle class="food" cx="152" cy="148" r="5"/>
+  <circle class="food" cx="130" cy="148" r="5"/>
+  
+  <!-- Brand highlight -->
+  <rect fill="#FFE082" x="65" y="110" width="50" height="8" rx="2"/>
+  <path class="outline" d="M65 110 L115 110 M65 118 L115 118"/>
+</svg>

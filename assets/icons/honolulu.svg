@@ -1,0 +1,77 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+  <!-- Honolulu Poke bowl -->
+  <defs>
+    <style>
+      .bowl { fill: #E3F2FD; }
+      .rice { fill: #FAFAFA; }
+      .salmon { fill: #FF5252; }
+      .avocado { fill: #4CAF50; }
+      .edamame { fill: #8BC34A; }
+      .seaweed { fill: #424242; }
+      .outline { fill: none; stroke: #2C3E50; stroke-width: 2.5; stroke-linejoin: round; }
+      .detail { fill: #2C3E50; }
+      .logo-circle { fill: #FF6B6B; }
+    </style>
+  </defs>
+  
+  <!-- Bowl -->
+  <ellipse class="bowl" cx="100" cy="90" rx="65" ry="18"/>
+  <path class="bowl" d="M35 90 L45 140 Q45 155 100 155 Q155 155 155 140 L165 90"/>
+  <path class="outline" d="M35 90 Q35 100 100 100 Q165 100 165 90"/>
+  <path class="outline" d="M35 90 L45 140 Q45 155 100 155 Q155 155 155 140 L165 90"/>
+  
+  <!-- Rice base -->
+  <ellipse class="rice" cx="100" cy="95" rx="60" ry="15"/>
+  <path class="outline" d="M40 95 Q40 100 100 100 Q160 100 160 95"/>
+  <!-- Rice grains texture -->
+  <circle fill="#EEEEEE" cx="70" cy="97" r="2"/>
+  <circle fill="#EEEEEE" cx="85" cy="95" r="2"/>
+  <circle fill="#EEEEEE" cx="100" cy="96" r="2"/>
+  <circle fill="#EEEEEE" cx="115" cy="95" r="2"/>
+  <circle fill="#EEEEEE" cx="130" cy="97" r="2"/>
+  
+  <!-- Salmon cubes (left) -->
+  <rect class="salmon" x="50" y="83" width="15" height="15" rx="2"/>
+  <rect class="salmon" x="50" y="100" width="15" height="12" rx="2"/>
+  <path class="outline" d="M50 83 L65 83 L65 98 L50 98 Z"/>
+  <path class="outline" d="M50 100 L65 100 L65 112 L50 112"/>
+  <line stroke="white" stroke-width="1.5" opacity="0.5" x1="52" y1="88" x2="63" y2="88"/>
+  <line stroke="white" stroke-width="1.5" opacity="0.5" x1="52" y1="105" x2="63" y2="105"/>
+  
+  <!-- Avocado slices (top) -->
+  <ellipse class="avocado" cx="85" cy="80" rx="12" ry="8" transform="rotate(-20 85 80)"/>
+  <ellipse class="avocado" cx="100" cy="78" rx="12" ry="8" transform="rotate(-10 100 78)"/>
+  <ellipse class="avocado" cx="115" cy="80" rx="12" ry="8" transform="rotate(10 115 80)"/>
+  <path class="outline" d="M73 80 Q85 68 97 80"/>
+  <path class="outline" d="M88 78 Q100 66 112 78"/>
+  <path class="outline" d="M103 80 Q115 68 127 80"/>
+  
+  <!-- Edamame (right) -->
+  <ellipse class="edamame" cx="135" cy="92" rx="10" ry="6"/>
+  <ellipse class="edamame" cx="145" cy="95" rx="10" ry="6"/>
+  <ellipse class="edamame" cx="140" cy="103" rx="10" ry="6"/>
+  <path class="outline" d="M125 92 Q135 86 145 92"/>
+  <path class="outline" d="M135 95 Q145 89 155 95"/>
+  <path class="outline" d="M130 103 Q140 97 150 103"/>
+  
+  <!-- Seaweed strips -->
+  <rect class="seaweed" x="75" y="100" width="3" height="18" rx="1"/>
+  <rect class="seaweed" x="82" y="98" width="3" height="20" rx="1"/>
+  <rect class="seaweed" x="89" y="100" width="3" height="18" rx="1"/>
+  
+  <!-- Sesame seeds scattered -->
+  <circle fill="#FFE082" cx="95" cy="88" r="1.5"/>
+  <circle fill="#FFE082" cx="110" cy="90" r="1.5"/>
+  <circle fill="#FFE082" cx="125" cy="100" r="1.5"/>
+  <circle fill="#FFE082" cx="70" cy="110" r="1.5"/>
+  
+  <!-- Logo badge -->
+  <circle class="logo-circle" cx="145" cy="45" r="18"/>
+  <circle class="outline" cx="145" cy="45" r="18"/>
+  <text x="145" y="42" font-family="Arial, sans-serif" font-size="9" font-weight="bold" fill="white" text-anchor="middle">HONO</text>
+  <text x="145" y="51" font-family="Arial, sans-serif" font-size="9" font-weight="bold" fill="white" text-anchor="middle">LULU</text>
+  
+  <!-- Chopsticks crossed -->
+  <line stroke="#8D6E63" stroke-width="3" stroke-linecap="round" x1="165" y1="70" x2="185" y2="130"/>
+  <line stroke="#8D6E63" stroke-width="3" stroke-linecap="round" x1="175" y1="70" x2="155" y2="130"/>
+</svg>

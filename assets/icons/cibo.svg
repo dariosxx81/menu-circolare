@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+  <!-- Hamburger icon -->
+  <defs>
+    <style>
+      .bun-top { fill: #FFD54F; }
+      .bun-bottom { fill: #FFC107; }
+      .lettuce { fill: #4CAF50; }
+      .patty { fill: #5D4037; }
+      .cheese { fill: #FF9800; }
+      .tomato { fill: #F44336; }
+      .outline { fill: none; stroke: #2C3E50; stroke-width: 2.5; stroke-linejoin: round; }
+      .detail { fill: #2C3E50; }
+      .sesame { fill: #FFF9C4; }
+    </style>
+  </defs>
+  
+  <!-- Top bun -->
+  <ellipse class="bun-top" cx="100" cy="60" rx="55" ry="25"/>
+  <path class="bun-top" d="M45 60 Q45 40 100 40 Q155 40 155 60"/>
+  <path class="outline" d="M45 60 Q45 40 100 40 Q155 40 155 60 L155 65 Q155 75 100 75 Q45 75 45 65 Z"/>
+  
+  <!-- Sesame seeds -->
+  <ellipse class="sesame" cx="75" cy="50" rx="3" ry="2"/>
+  <ellipse class="sesame" cx="95" cy="48" rx="3" ry="2"/>
+  <ellipse class="sesame" cx="115" cy="52" rx="3" ry="2"/>
+  <ellipse class="sesame" cx="85" cy="58" rx="3" ry="2"/>
+  <ellipse class="sesame" cx="105" cy="55" rx="3" ry="2"/>
+  <ellipse class="sesame" cx="125" cy="49" rx="3" ry="2"/>
+  
+  <!-- Lettuce (wavy) -->
+  <path class="lettuce" d="M40 78 Q50 75 60 78 Q70 81 80 78 Q90 75 100 78 Q110 81 120 78 Q130 75 140 78 Q150 81 160 78 L160 88 Q150 91 140 88 Q130 85 120 88 Q110 91 100 88 Q90 85 80 88 Q70 91 60 88 Q50 85 40 88 Z"/>
+  <path class="outline" d="M40 78 Q50 75 60 78 Q70 81 80 78 Q90 75 100 78 Q110 81 120 78 Q130 75 140 78 Q150 81 160 78"/>
+  <path class="outline" d="M40 88 Q50 85 60 88 Q70 91 80 88 Q90 85 100 88 Q110 91 120 88 Q130 85 140 88 Q150 91 160 88"/>
+  
+  <!-- Tomato slices -->
+  <circle class="tomato" cx="70" cy="100" r="10"/>
+  <circle class="tomato" cx="130" cy="100" r="10"/>
+  <circle class="outline" cx="70" cy="100" r="10"/>
+  <circle class="outline" cx="130" cy="100" r="10"/>
+  <circle fill="white" opacity="0.4" cx="73" cy="97" r="3"/>
+  <circle fill="white" opacity="0.4" cx="133" cy="97" r="3"/>
+  
+  <!-- Cheese -->
+  <path class="cheese" d="M35 105 L165 105 L160 120 L40 120 Z"/>
+  <path class="outline" d="M35 105 L165 105 L160 120 L40 120 Z"/>
+  <circle fill="#FFB74D" cx="60" cy="112" r="4"/>
+  <circle fill="#FFB74D" cx="100" cy="110" r="5"/>
+  <circle fill="#FFB74D" cx="140" cy="113" r="4"/>
+  
+  <!-- Patty -->
+  <rect class="patty" x="30" y="120" width="140" height="20" rx="3"/>
+  <path class="outline" d="M30 120 L170 120 L170 140 L30 140 Z"/>
+  <!-- Grill marks -->
+  <line stroke="#3E2723" stroke-width="2" x1="50" y1="125" x2="150" y2="125"/>
+  <line stroke="#3E2723" stroke-width="2" x1="50" y1="135" x2="150" y2="135"/>
+  
+  <!-- Bottom bun -->
+  <rect class="bun-bottom" x="35" y="140" width="130" height="18" rx="3"/>
+  <path class="outline" d="M35 140 L165 140 L165 158 Q165 165 100 165 Q35 165 35 158 Z"/>
+  
+  <!-- Shine effect -->
+  <ellipse fill="white" opacity="0.3" cx="90" cy="52" rx="15" ry="8"/>
+</svg>

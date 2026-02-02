@@ -1,0 +1,67 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+  <!-- Nuts and snacks icon -->
+  <defs>
+    <style>
+      .almond { fill: #A1887F; }
+      .walnut { fill: #8D6E63; }
+      .peanut { fill: #BCAAA4; }
+      .outline { fill: none; stroke: #2C3E50; stroke-width: 2.5; stroke-linejoin: round; }
+      .detail { fill: #2C3E50; }
+      .logo-circle { fill: #6D4C41; }
+      .shell-line { fill: none; stroke: #5D4037; stroke-width: 1.5; }
+    </style>
+  </defs>
+  
+  <!-- Walnut (top left) -->
+  <ellipse class="walnut" cx="70" cy="70" rx="20" ry="16"/>
+  <path class="outline" d="M50 70 Q50 54 70 54 Q90 54 90 70 Q90 86 70 86 Q50 86 50 70"/>
+  <path class="shell-line" d="M70 54 Q70 70 70 86"/>
+  <path class="shell-line" d="M58 62 Q70 70 82 62"/>
+  <path class="shell-line" d="M58 78 Q70 70 82 78"/>
+  
+  <!-- Almonds (top right, overlapping) -->
+  <ellipse class="almond" cx="125" cy="65" rx="12" ry="20" transform="rotate(25 125 65)"/>
+  <ellipse class="almond" cx="140" cy="70" rx="12" ry="20" transform="rotate(-15 140 70)"/>
+  <path class="outline" d="M113 55 Q125 45 137 55 Q143 65 137 75 Q125 85 113 75 Q107 65 113 55"/>
+  <path class="outline" d="M128 60 Q140 50 152 60 Q158 70 152 80 Q140 90 128 80 Q122 70 128 60"/>
+  <line class="shell-line" x1="125" y1="48" x2="125" y2="82"/>
+  <line class="shell-line" x1="140" y1="53" x2="140" y2="87"/>
+  
+  <!-- Peanuts in shell (center) -->
+  <ellipse class="peanut" cx="95" cy="110" rx="28" ry="15"/>
+  <ellipse class="peanut" cx="105" cy="110" rx="28" ry="15"/>
+  <path class="outline" d="M67 110 Q67 95 95 95 Q100 95 100 110 Q100 110 105 110 Q105 95 110 95 Q133 95 133 110 Q133 125 105 125 Q100 125 100 110 Q100 110 95 110 Q67 125 67 110"/>
+  <path class="shell-line" d="M80 102 Q95 98 110 102"/>
+  <path class="shell-line" d="M80 118 Q95 122 110 118"/>
+  <line class="shell-line" x1="95" y1="98" x2="95" y2="122"/>
+  <line class="shell-line" x1="105" y1="98" x2="105" y2="122"/>
+  
+  <!-- Cashew (bottom left) -->
+  <path class="almond" d="M55 130 Q45 130 45 140 Q45 155 60 155 Q70 155 75 145 Q78 135 70 130 Z"/>
+  <path class="outline" d="M55 130 Q45 130 45 140 Q45 155 60 155 Q70 155 75 145 Q78 135 70 130 Z"/>
+  <path class="shell-line" d="M50 135 Q55 140 60 145"/>
+  
+  <!-- Hazelnuts (bottom right) -->
+  <circle class="walnut" cx="130" cy="140" r="14"/>
+  <circle class="outline" cx="130" cy="140" r="14"/>
+  <circle class="walnut" cx="155" cy="145" r="12"/>
+  <circle class="outline" cx="155" cy="145" r="12"/>
+  <line class="shell-line" x1="122" y1="132" x2="138" y2="148"/>
+  <line class="shell-line" x1="122" y1="148" x2="138" y2="132"/>
+  <line class="shell-line" x1="147" y1="137" x2="163" y2="153"/>
+  <line class="shell-line" x1="147" y1="153" x2="163" y2="137"/>
+  
+  <!-- Brand badge -->
+  <circle class="logo-circle" cx="165" cy="45" r="20"/>
+  <circle class="outline" cx="165" cy="45" r="20"/>
+  <text x="165" y="51" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="white" text-anchor="middle">NUTS</text>
+  
+  <!-- Small nuts scattered -->
+  <circle fill="#A1887F" cx="45" cy="100" r="4"/>
+  <circle fill="#8D6E63" cx="160" cy="105" r="5"/>
+  <circle fill="#BCAAA4" cx="115" cy="85" r="4"/>
+  
+  <!-- Decorative sparkles -->
+  <path fill="#FFD54F" d="M35 55 L37 60 L32 58 L37 60 L35 65 L35 60 L30 60 L35 58 Z"/>
+  <path fill="#FFD54F" d="M175 120 L177 125 L172 123 L177 125 L175 130 L175 125 L170 125 L175 123 Z"/>
+</svg>

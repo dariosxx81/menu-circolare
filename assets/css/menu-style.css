@@ -1,0 +1,383 @@
+/* Mesa Circular Menu - Frontend Styles (5+1 Layout) */
+
+:root {
+  --mcm-bg-color: #1b4f5c;
+  --mcm-circle-color: #ffffff;
+  --mcm-hover-scale: 1.15;
+  --mcm-animation-duration: 0.3s;
+  --mcm-circle-size: 200px;
+  --mcm-circle-distance: 300px;
+  --mcm-central-size: 250px;
+}
+
+.mcm-menu-container {
+  background: var(--bg-color, var(--mcm-bg-color));
+  border-radius: 20px;
+  position: relative;
+  overflow: visible;
+}
+
+/* Circular layout for desktop */
+.mcm-menu-grid {
+  position: relative;
+  width: 100%;
+  max-width: 800px;
+  height: 800px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Central item styling */
+.mcm-central-item {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  transition: all var(--animation-duration, var(--mcm-animation-duration))
+    cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.mcm-central-circle {
+  width: var(--central-size, var(--mcm-central-size));
+  height: var(--central-size, var(--mcm-central-size));
+  background: var(--circle-color, var(--mcm-circle-color));
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.3);
+  overflow: hidden;
+  transition: all var(--animation-duration, var(--mcm-animation-duration))
+    cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.mcm-central-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.mcm-central-item:hover .mcm-central-circle {
+  transform: scale(var(--hover-scale, var(--mcm-hover-scale)));
+  box-shadow: 0 16px 48px rgba(0, 0, 0, 0.4);
+}
+
+/* External menu items */
+.mcm-menu-item {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  transition: all var(--animation-duration, var(--mcm-animation-duration))
+    cubic-bezier(0.34, 1.56, 0.64, 1);
+  z-index: 1;
+  left: 50%;
+  top: 50%;
+}
+
+/* Circular positioning - 5 items evenly distributed (72° apart) */
+/* Starting from top (0°) and going clockwise */
+
+.mcm-menu-item:nth-child(2) {
+  /* 0° - Top */
+  transform: translate(-50%, -50%)
+    translate(
+      0px,
+      calc(var(--circle-distance, var(--mcm-circle-distance)) * -1)
+    );
+}
+
+.mcm-menu-item:nth-child(3) {
+  /* 72° - Top Right */
+  transform: translate(-50%, -50%)
+    translate(
+      calc(var(--circle-distance, var(--mcm-circle-distance)) * 0.951),
+      calc(var(--circle-distance, var(--mcm-circle-distance)) * -0.309)
+    );
+}
+
+.mcm-menu-item:nth-child(4) {
+  /* 144° - Bottom Right */
+  transform: translate(-50%, -50%)
+    translate(
+      calc(var(--circle-distance, var(--mcm-circle-distance)) * 0.588),
+      calc(var(--circle-distance, var(--mcm-circle-distance)) * 0.809)
+    );
+}
+
+.mcm-menu-item:nth-child(5) {
+  /* 216° - Bottom Left */
+  transform: translate(-50%, -50%)
+    translate(
+      calc(var(--circle-distance, var(--mcm-circle-distance)) * -0.588),
+      calc(var(--circle-distance, var(--mcm-circle-distance)) * 0.809)
+    );
+}
+
+.mcm-menu-item:nth-child(6) {
+  /* 288° - Top Left */
+  transform: translate(-50%, -50%)
+    translate(
+      calc(var(--circle-distance, var(--mcm-circle-distance)) * -0.951),
+      calc(var(--circle-distance, var(--mcm-circle-distance)) * -0.309)
+    );
+}
+
+/* Circle styling */
+.mcm-circle {
+  width: var(--circle-size, var(--mcm-circle-size));
+  height: var(--circle-size, var(--mcm-circle-size));
+  background: var(--circle-color, var(--mcm-circle-color));
+  border-radius: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+  transition: all var(--animation-duration, var(--mcm-animation-duration))
+    cubic-bezier(0.34, 1.56, 0.64, 1);
+  position: relative;
+  overflow: hidden;
+}
+
+/* Full image styling - replaces icon + text */
+.mcm-full-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: all var(--animation-duration, var(--mcm-animation-duration)) ease;
+  position: relative;
+  z-index: 2;
+}
+
+/* Hover effects */
+.mcm-menu-item:hover .mcm-circle {
+  transform: scale(var(--hover-scale, var(--mcm-hover-scale)));
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.25);
+}
+
+.mcm-menu-item:hover .mcm-full-image {
+  transform: scale(1.05);
+}
+
+/* Active/Focus states for accessibility */
+.mcm-menu-item:focus,
+.mcm-central-item:focus {
+  outline: 3px solid rgba(200, 163, 95, 0.7);
+  outline-offset: 5px;
+  border-radius: 50%;
+}
+
+.mcm-menu-item:active .mcm-circle {
+  transform: scale(0.95);
+}
+
+/* Glassmorphism effect on hover */
+.mcm-circle::before,
+.mcm-central-circle::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(
+    45deg,
+    rgba(255, 255, 255, 0.1) 0%,
+    rgba(255, 255, 255, 0.3) 50%,
+    rgba(255, 255, 255, 0.1) 100%
+  );
+  opacity: 0;
+  transition: opacity var(--animation-duration, var(--mcm-animation-duration))
+    ease;
+}
+
+.mcm-menu-item:hover .mcm-circle::before,
+.mcm-central-item:hover .mcm-central-circle::before {
+  opacity: 1;
+}
+
+/* Mobile Layout - Responsive Grid */
+@media (max-width: 768px) {
+  .mcm-menu-container {
+    padding: 40px 20px;
+    min-height: 600px; /* Ensure space for circular layout */
+  }
+
+  /* Maintain circular layout on mobile - just use the same positioning */
+  .mcm-menu-grid {
+    position: relative;
+    width: 100%;
+    height: 600px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  /* Keep circular positioning - sizes controlled by admin settings */
+  .mcm-central-item {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  .mcm-menu-item {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+  }
+
+  /* Use the same circular positioning as desktop */
+  /* Top */
+  .mcm-menu-item:nth-child(2) {
+    transform: translate(-50%, -50%)
+      translate(0px, calc(var(--circle-distance) * -1));
+  }
+
+  /* Top Right */
+  .mcm-menu-item:nth-child(3) {
+    transform: translate(-50%, -50%)
+      translate(
+        calc(var(--circle-distance) * 0.951),
+        calc(var(--circle-distance) * -0.309)
+      );
+  }
+
+  /* Bottom Right */
+  .mcm-menu-item:nth-child(4) {
+    transform: translate(-50%, -50%)
+      translate(
+        calc(var(--circle-distance) * 0.588),
+        calc(var(--circle-distance) * 0.809)
+      );
+  }
+
+  /* Bottom Left */
+  .mcm-menu-item:nth-child(5) {
+    transform: translate(-50%, -50%)
+      translate(
+        calc(var(--circle-distance) * -0.588),
+        calc(var(--circle-distance) * 0.809)
+      );
+  }
+
+  /* Top Left */
+  .mcm-menu-item:nth-child(6) {
+    transform: translate(-50%, -50%)
+      translate(
+        calc(var(--circle-distance) * -0.951),
+        calc(var(--circle-distance) * -0.309)
+      );
+  }
+
+  /* Circles use the CSS variables from admin settings - MOBILE */
+  .mcm-circle {
+    width: var(--circle-size-mobile, 140px);
+    height: var(--circle-size-mobile, 140px);
+  }
+
+  .mcm-central-circle {
+    width: var(--central-size-mobile, 120px);
+    height: var(--central-size-mobile, 120px);
+  }
+
+  /* Use mobile distance variables */
+  .mcm-menu-item:nth-child(2) {
+    transform: translate(-50%, -50%)
+      translate(0px, calc(var(--circle-distance-mobile) * -1));
+  }
+
+  .mcm-menu-item:nth-child(3) {
+    transform: translate(-50%, -50%)
+      translate(
+        calc(var(--circle-distance-mobile) * 0.951),
+        calc(var(--circle-distance-mobile) * -0.309)
+      );
+  }
+
+  .mcm-menu-item:nth-child(4) {
+    transform: translate(-50%, -50%)
+      translate(
+        calc(var(--circle-distance-mobile) * 0.588),
+        calc(var(--circle-distance-mobile) * 0.809)
+      );
+  }
+
+  .mcm-menu-item:nth-child(5) {
+    transform: translate(-50%, -50%)
+      translate(
+        calc(var(--circle-distance-mobile) * -0.588),
+        calc(var(--circle-distance-mobile) * 0.809)
+      );
+  }
+
+  .mcm-menu-item:nth-child(6) {
+    transform: translate(-50%, -50%)
+      translate(
+        calc(var(--circle-distance-mobile) * -0.951),
+        calc(var(--circle-distance-mobile) * -0.309)
+      );
+  }
+}
+
+/* Bloom Animation Setup */
+
+/* Base transition settings - ALWAYS apply so active state transitions smoothly */
+.mcm-menu-item,
+.mcm-central-item {
+  transition: transform 0.8s cubic-bezier(0.34, 1.56, 0.64, 1), 
+              opacity 0.6s ease-out;
+}
+
+/* Initial State - Before JS triggers animation */
+/* We use !important to override the specific nth-child transforms in this state only */
+.mcm-menu-grid:not(.mcm-anim-active) .mcm-menu-item,
+.mcm-menu-grid:not(.mcm-anim-active) .mcm-central-item {
+  opacity: 0;
+  transform: translate(-50%, -50%) scale(0.5) !important;
+  pointer-events: none;
+}
+
+/* Active State - Triggered by JS */
+.mcm-menu-grid.mcm-anim-active .mcm-menu-item,
+.mcm-menu-grid.mcm-anim-active .mcm-central-item {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/* Staggered Delays for "Bloom" effect */
+.mcm-menu-grid.mcm-anim-active .mcm-central-item {
+  transition-delay: 0s;
+}
+
+.mcm-menu-grid.mcm-anim-active .mcm-menu-item:nth-child(2) { transition-delay: 0.1s; }
+.mcm-menu-grid.mcm-anim-active .mcm-menu-item:nth-child(3) { transition-delay: 0.2s; }
+.mcm-menu-grid.mcm-anim-active .mcm-menu-item:nth-child(4) { transition-delay: 0.3s; }
+.mcm-menu-grid.mcm-anim-active .mcm-menu-item:nth-child(5) { transition-delay: 0.4s; }
+.mcm-menu-grid.mcm-anim-active .mcm-menu-item:nth-child(6) { transition-delay: 0.5s; }
+
+/* Touch device optimizations */
+@media (hover: none) and (pointer: coarse) {
+  .mcm-menu-item:active .mcm-circle {
+    transform: scale(var(--hover-scale, var(--mcm-hover-scale)));
+    box-shadow: 0 16px 40px rgba(0, 0, 0, 0.25);
+  }
+
+  .mcm-menu-item:active .mcm-full-image {
+    transform: scale(1.05);
+  }
+
+  .mcm-central-item:active .mcm-central-circle {
+    transform: scale(var(--hover-scale, var(--mcm-hover-scale)));
+    box-shadow: 0 16px 48px rgba(0, 0, 0, 0.4);
+  }
+}

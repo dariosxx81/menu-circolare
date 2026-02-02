@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+  <!-- Shopping cart with groceries -->
+  <defs>
+    <style>
+      .cart { fill: #E8E8E8; stroke: #2C3E50; stroke-width: 3; }
+      .broccoli { fill: #4CAF50; }
+      .carrot { fill: #FF9800; }
+      .bread { fill: #FFD54F; }
+      .milk { fill: #2196F3; }
+      .apple { fill: #F44336; }
+      .outline { fill: none; stroke: #2C3E50; stroke-width: 2.5; stroke-linejoin: round; }
+      .detail { fill: #2C3E50; }
+    </style>
+  </defs>
+  
+  <!-- Cart body -->
+  <path class="cart" d="M40 130 L45 80 L145 80 L150 130 Q150 140 140 140 L50 140 Q40 140 40 130 Z"/>
+  
+  <!-- Cart grid -->
+  <line class="outline" x1="50" y1="90" x2="140" y2="90"/>
+  <line class="outline" x1="50" y1="105" x2="140" y2="105"/>
+  <line class="outline" x1="65" y1="80" x2="60" y2="140"/>
+  <line class="outline" x1="125" y1="80" x2="130" y2="140"/>
+  
+  <!-- Broccoli -->
+  <circle class="broccoli" cx="60" cy="55" r="8"/>
+  <circle class="broccoli" cx="68" cy="50" r="7"/>
+  <circle class="broccoli" cx="72" cy="58" r="6"/>
+  <rect class="outline" x="63" y="63" width="6" height="15" rx="2"/>
+  
+  <!-- Carrot -->
+  <path class="carrot" d="M85 50 L88 70 L82 70 Z"/>
+  <path class="outline" d="M85 50 L88 70 L82 70 Z"/>
+  <path class="detail" d="M85 45 L83 50 M85 45 L87 50 M85 42 L85 50"/>
+  
+  <!-- Bread -->
+  <ellipse class="bread" cx="115" cy="58" rx="18" ry="12"/>
+  <path class="outline" d="M97 58 Q97 46 115 46 Q133 46 133 58"/>
+  <line class="detail" x1="105" y1="52" x2="105" y2="58"/>
+  <line class="detail" x1="115" y1="52" x2="115" y2="58"/>
+  <line class="detail" x1="125" y1="52" x2="125" y2="58"/>
+  
+  <!-- Milk carton -->
+  <rect class="milk" x="130" y="48" width="16" height="24" rx="2"/>
+  <path class="outline" d="M130 48 L130 72 M146 48 L146 72 M130 48 L146 48 M130 72 L146 72"/>
+  <rect fill="white" x="134" y="54" width="8" height="6" rx="1"/>
+  
+  <!-- Apple -->
+  <circle class="apple" cx="98" cy="62" r="7"/>
+  <path class="outline" d="M98 55 L98 50"/>
+  
+  <!-- Cart wheels -->
+  <circle class="detail" cx="65" cy="150" r="8"/>
+  <circle fill="white" cx="65" cy="150" r="4"/>
+  <circle class="detail" cx="125" cy="150" r="8"/>
+  <circle fill="white" cx="125" cy="150" r="4"/>
+  
+  <!-- Cart handle -->
+  <path class="outline" d="M150 130 L165 130 L165 60 L155 50"/>
+  <path class="outline" d="M40 130 L25 130 L25 60"/>
+</svg>

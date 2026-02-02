@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+  <!-- Shopping bags icon -->
+  <defs>
+    <style>
+      .bag1 { fill: #4ECDC4; }
+      .bag2 { fill: #FFE66D; }
+      .handle { fill: none; stroke: #2C3E50; stroke-width: 4; stroke-linecap: round; }
+      .outline { fill: none; stroke: #2C3E50; stroke-width: 3; stroke-linejoin: round; }
+      .detail { fill: #2C3E50; }
+    </style>
+  </defs>
+  
+  <!-- Left bag (teal) -->
+  <path class="bag1" d="M45 70 L45 160 Q45 170 55 170 L95 170 Q105 170 105 160 L105 70 Z"/>
+  <path class="outline" d="M45 70 L45 160 Q45 170 55 170 L95 170 Q105 170 105 160 L105 70 Z"/>
+  <path class="handle" d="M55 70 Q55 50 75 50 Q95 50 95 70"/>
+  <circle class="detail" cx="65" cy="95" r="5"/>
+  <circle class="detail" cx="85" cy="95" r="5"/>
+  <circle class="detail" cx="65" cy="115" r="5"/>
+  <circle class="detail" cx="85" cy="115" r="5"/>
+  
+  <!-- Right bag (yellow with stripes) -->
+  <path class="bag2" d="M95 60 L95 150 Q95 160 105 160 L145 160 Q155 160 155 150 L155 60 Z"/>
+  <path class="outline" d="M95 60 L95 150 Q95 160 105 160 L145 160 Q155 160 155 150 L155 60 Z"/>
+  <path class="handle" d="M105 60 Q105 40 125 40 Q145 40 145 60"/>
+  <line class="outline" x1="100" y1="75" x2="150" y2="90"/>
+  <line class="outline" x1="100" y1="95" x2="150" y2="110"/>
+  <line class="outline" x1="100" y1="115" x2="150" y2="130"/>
+  
+  <!-- Sparkle details -->
+  <path class="detail" d="M30 50 L32 55 L27 53 L32 55 L30 60 L30 55 L25 55 L30 53 Z"/>
+  <path class="detail" d="M165 85 L167 90 L162 88 L167 90 L165 95 L165 90 L160 90 L165 88 Z"/>
+</svg>
