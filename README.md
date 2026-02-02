@@ -176,7 +176,6 @@ Mesa-Menu/
 Per supporto, domande o segnalazione bug:
 
 - **Email**: darios1981@gmail.com
-- **Website**: https://mesafood.it
 
 ## 📝 Changelog
 
