@@ -175,7 +175,7 @@ Mesa-Menu/
 
 Per supporto, domande o segnalazione bug:
 
-- **Email**: support@mesafood.it
+- **Email**: darios1981@gmail.com
 - **Website**: https://mesafood.it
 
 ## 📝 Changelog
@@ -194,12 +194,12 @@ Per supporto, domande o segnalazione bug:
 
 GPL v2 or later
 
-Copyright (C) 2026 Mesa Team
+Copyright (C) 2026 Dario Molino
 
 This program is free software; you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation; either version 2 of the License, or (at your option) any later version.
 
 ## 🙏 Crediti
 
-Sviluppato con ❤️ dal Team Mesa
+Sviluppato con ❤️ dal Team Dario Molino
 
 **Made in Italy** 🇮🇹
